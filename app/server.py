@@ -18,8 +18,8 @@ from starlette.staticfiles import StaticFiles
 
 #set url
 # export_file_url = 'https://drive.google.com/uc?export=download&id=1ZZ_2JRe39KcgqGu75watpeLOtQGfeDPA'
-model_config_name = '/models/model.config'
-model_file_name = '/models/best_model.h5'
+model_config_name = 'app/models/model.config'
+model_file_name = 'app/models/best_model.h5'
 
 classes = ['SharPei', 'French_dog', 'Pug']
 path = Path(__file__).parent
@@ -43,6 +43,7 @@ async def setup_learner():
     try:
         #learn = load_learner(path, export_file_name)        
         #learn = keras.models.load_model("app/"+export_file_name)
+        print("set up learner", model_config_name)
         with open(model_config_name, "r") as text_file:
             json_string = text_file.read()
         learn = keras.models.model_from_json(json_string)
