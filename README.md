@@ -4,3 +4,9 @@ This repo can be used as a starting point to deploy [tensorflow 2.0] models on R
 
 The sample app described here is up at https://fastai-v3.onrender.com. Test it out with bear images!
 
+## change
+* make the requirement correspoding to colab.
+* change the title and the text on the index.html.
+
+## After the deploy
+* result: https://classifier-frenchdog-sharpei-pug.onrender.com/
